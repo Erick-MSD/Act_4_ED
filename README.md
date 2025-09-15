@@ -16,6 +16,26 @@ Este proyecto implementa un Árbol Binario de Búsqueda (BST) en Java con operac
 - `src/act4ed/employee/EmployeeDirectory.java`: Directorio que usa BST para almacenar y buscar empleados, con comparación vs búsqueda secuencial.
 - `src/act4ed/Main.java`: Demostración de operaciones y del caso práctico.
 
+## 📌 API esencial
+
+- Nodo.java: Representa cada nodo del árbol (ID del empleado, referencias izquierda/derecha).
+
+- ArbolBinario.java: Métodos principales:
+
+    - insertar(int id)
+
+    - eliminar(int id)
+
+    - buscar(int id)
+
+    - recorridoInorden()
+
+    - recorridoPreorden()
+
+    - recorridoPostorden()
+
+- Main.java: Clase de prueba, crea el árbol y ejecuta operaciones de gestión de empleados.
+
 ## 📊 Diagramas
 
 Diagrama de clases simplificado:
