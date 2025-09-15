@@ -49,9 +49,6 @@ Act_4_ED/
 
 ---
 
-
----
-
 ## 📌 API esencial
 
 - **Nodo.java**: Representa cada nodo del árbol (ID del empleado, referencias izquierda/derecha).  
@@ -68,8 +65,7 @@ Act_4_ED/
 
 ## 📊 Diagramas
 
-Diagrama de clases simplificado:
-
+### Diagrama de clases
 ```mermaid
 classDiagram
     class Node~T~ {
@@ -102,9 +98,9 @@ classDiagram
     }
     ArbolBinario --> Node
     EmployeeDirectory --> ArbolBinario
-```
+```  
 
-Ejemplo de árbol tras insertar [50, 30, 70, 20, 40, 60, 80]:
+### Ejemplo de árbol tras inserciones
 
 ```mermaid
 graph TD
@@ -121,6 +117,22 @@ graph TD
     B30 --> E40
     C70 --> F60
     C70 --> G80
+```
+
+### Diagrama de flujo (inserción y eliminación)
+
+```mermaid
+flowchart TD
+    A[Inicio] --> B{¿Árbol vacío?}
+    B -- Sí --> C[Crear nodo como raíz]
+    B -- No --> D{¿Valor < nodo actual?}
+    D -- Sí --> E[Ir subárbol izquierdo]
+    D -- No --> F[Ir subárbol derecho]
+    E --> B
+    F --> B
+    C --> G[Fin]
+    E --> G
+    F --> G
 ```
 
 ---
