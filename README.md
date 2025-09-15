@@ -2,19 +2,34 @@
 
 Este proyecto implementa un Árbol Binario de Búsqueda (BST) en Java con operaciones básicas (inserción, eliminación, búsqueda) y recorridos (preorden, inorden, postorden). Además, incluye un caso práctico de gestión de empleados utilizando el BST para optimizar búsquedas por ID.
 
+---
+
 ## 🎯 Objetivo
 
 - Comprender la estructura y funcionamiento de los árboles binarios.
 - Implementar y manipular árboles binarios en Java.
 - Aplicar los conceptos en un caso práctico: gestión de empleados.
 
+---
+
 ## 📂 Estructura del código
 
-- `src/act4ed/tree/Node.java`: Nodo genérico del árbol.
-- `src/act4ed/tree/ArbolBinario.java`: Implementación del BST con insert, remove, contains y recorridos.
-- `src/act4ed/employee/Employee.java`: POJO de empleado (id, nombre, departamento) y Comparable por ID.
-- `src/act4ed/employee/EmployeeDirectory.java`: Directorio que usa BST para almacenar y buscar empleados, con comparación vs búsqueda secuencial.
-- `src/act4ed/Main.java`: Demostración de operaciones y del caso práctico.
+```
+Act_4_ED/
+│
+├── src/                      # Código fuente principal
+│   ├── Nodo.java             # Clase que representa un nodo del árbol
+│   ├── ArbolBinario.java     # Clase con las operaciones del árbol binario
+│   ├── Main.java             # Punto de entrada, pruebas de funcionamiento
+│
+├── docs/                     # Documentación y diagramas
+│   └── flujo.png             # Diagrama de flujo del programa
+│
+├── README.md                 # Documentación del proyecto
+└── .gitignore                # Archivos y carpetas ignoradas por Git
+```
+
+---
 
 ## 📌 API esencial
 
@@ -35,6 +50,8 @@ Este proyecto implementa un Árbol Binario de Búsqueda (BST) en Java con operac
     - recorridoPostorden()
 
 - Main.java: Clase de prueba, crea el árbol y ejecuta operaciones de gestión de empleados.
+
+---
 
 ## 📊 Diagramas
 
@@ -93,6 +110,8 @@ graph TD
     C70 --> G80
 ```
 
+---
+
 ## 🛠️ Cómo compilar y ejecutar
 
 Requisitos: Java 17+ (cualquier JDK reciente funciona).
@@ -104,11 +123,15 @@ javac -d out src/act4ed/tree/*.java src/act4ed/employee/*.java src/act4ed/Main.j
 java -cp out act4ed.Main
 ```
 
+---
+
 ## 💻 Explicación del funcionamiento
 
 - El BST mantiene el orden por medio de `Comparable<T>`. La búsqueda y eliminación siguen el algoritmo clásico (en eliminación, si el nodo tiene dos hijos se reemplaza con el sucesor inorden).
 - Los recorridos (inorden, preorden, postorden) se implementan recursivamente y se devuelven como listas.
 - Para empleados, el BST ordena por `id`. El directorio también guarda una lista lineal para comparar con búsqueda secuencial.
+
+---
 
 ## Evidencias de ejecución
 
@@ -159,9 +182,13 @@ Buscar ID 1011 inexistente -> BST pasos=2, Secuencial: null
 Conclusión: El BST reduce comparaciones respecto a una búsqueda secuencial, especialmente cuando crece el número de empleados.
 ```
 
+---
+
 ## Reflexión
 
 Los árboles binarios de búsqueda permiten insertar, buscar y eliminar en tiempo promedio O(log n) manteniendo los datos ordenados. Son base de estructuras más avanzadas (AVL, Red-Black, B-Trees) usadas en bases de datos, compiladores y motores de búsqueda. En gestión de empleados, al crecer el número de registros, un BST reduce comparaciones frente a una búsqueda lineal, mejorando rendimiento sin requerir estructuras externas.
+
+---
 
 ## 👥 Autores
 * Erick Mauricio Santiago Díaz (@Erick-MSD)
