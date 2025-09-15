@@ -33,7 +33,7 @@ Este proyecto implementa un Árbol Binario de Búsqueda (BST) en Java con operac
 ---
 
 ## 📂 Estructura del código
-
+```
 Act_4_ED/
 │
 ├── src/ # Código fuente principal
@@ -46,7 +46,7 @@ Act_4_ED/
 │
 ├── README.md # Documentación del proyecto
 └── .gitignore # Archivos y carpetas ignoradas por Git
-
+```
 ---
 
 ## 📌 API esencial
