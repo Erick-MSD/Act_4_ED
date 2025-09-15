@@ -12,44 +12,57 @@ Este proyecto implementa un Árbol Binario de Búsqueda (BST) en Java con operac
 
 ---
 
+## ✅ Requisitos
+
+- Java JDK 17 o superior.  
+- Entorno de desarrollo: Visual Studio Code / IntelliJ / Eclipse.  
+- Sistema operativo: Windows, Linux o macOS.  
+- Git y GitHub para control de versiones.  
+- Consola o terminal para compilar y ejecutar.
+
+---
+
+## 🖥️ Tecnologías utilizadas
+
+- **Java JDK 17+** → lógica y clases del BST.  
+- **GitHub** → control de versiones y documentación.  
+- **Markdown** → elaboración de README y reporte.  
+- **Mermaid** → diagramas de clases y árboles.  
+- (Opcional) **JUnit** → pruebas unitarias.  
+
+---
+
 ## 📂 Estructura del código
 
-```
 Act_4_ED/
 │
-├── src/                      # Código fuente principal
-│   ├── Nodo.java             # Clase que representa un nodo del árbol
-│   ├── ArbolBinario.java     # Clase con las operaciones del árbol binario
-│   ├── Main.java             # Punto de entrada, pruebas de funcionamiento
+├── src/ # Código fuente principal
+│ ├── Nodo.java # Clase que representa un nodo del árbol
+│ ├── ArbolBinario.java # Clase con las operaciones del árbol binario
+│ ├── Main.java # Punto de entrada, pruebas de funcionamiento
 │
-├── docs/                     # Documentación y diagramas
-│   └── flujo.png             # Diagrama de flujo del programa
+├── docs/ # Documentación y diagramas
+│ └── flujo.png # Diagrama de flujo del programa
 │
-├── README.md                 # Documentación del proyecto
-└── .gitignore                # Archivos y carpetas ignoradas por Git
-```
+├── README.md # Documentación del proyecto
+└── .gitignore # Archivos y carpetas ignoradas por Git
+
+---
+
 
 ---
 
 ## 📌 API esencial
 
-- Nodo.java: Representa cada nodo del árbol (ID del empleado, referencias izquierda/derecha).
-
-- ArbolBinario.java: Métodos principales:
-
-    - insertar(int id)
-
-    - eliminar(int id)
-
-    - buscar(int id)
-
-    - recorridoInorden()
-
-    - recorridoPreorden()
-
-    - recorridoPostorden()
-
-- Main.java: Clase de prueba, crea el árbol y ejecuta operaciones de gestión de empleados.
+- **Nodo.java**: Representa cada nodo del árbol (ID del empleado, referencias izquierda/derecha).  
+- **ArbolBinario.java**: Métodos principales:
+  - `insertar(int id)`
+  - `eliminar(int id)`
+  - `buscar(int id)`
+  - `recorridoInorden()`
+  - `recorridoPreorden()`
+  - `recorridoPostorden()`
+- **Main.java**: Clase de prueba, crea el árbol y ejecuta operaciones de gestión de empleados.
 
 ---
 
@@ -111,7 +124,6 @@ graph TD
 ```
 
 ---
-
 ## 🛠️ Cómo compilar y ejecutar
 
 Requisitos: Java 17+ (cualquier JDK reciente funciona).
@@ -123,15 +135,19 @@ javac -d out src/act4ed/tree/*.java src/act4ed/employee/*.java src/act4ed/Main.j
 java -cp out act4ed.Main
 ```
 
----
-
 ## 💻 Explicación del funcionamiento
 
-- El BST mantiene el orden por medio de `Comparable<T>`. La búsqueda y eliminación siguen el algoritmo clásico (en eliminación, si el nodo tiene dos hijos se reemplaza con el sucesor inorden).
-- Los recorridos (inorden, preorden, postorden) se implementan recursivamente y se devuelven como listas.
-- Para empleados, el BST ordena por `id`. El directorio también guarda una lista lineal para comparar con búsqueda secuencial.
+ - El BST mantiene el orden por medio de Comparable<T>.
+ - La búsqueda y eliminación siguen el algoritmo clásico (en eliminación, si el nodo tiene dos hijos se reemplaza con el sucesor inorden).
+ - Los recorridos (inorden, preorden, postorden) se implementan recursivamente y se devuelven como listas.
+ - Para empleados, el BST ordena por id. El directorio también guarda una lista lineal para comparar con búsqueda secuencial.
 
----
+## 🧮 Complejidad
+
+- Inserción: O(log n) en promedio, O(n) en el peor caso.
+- Búsqueda: O(log n) en promedio, O(n) en el peor caso.
+- Eliminación: O(log n) en promedio, O(n) en el peor caso.
+- Recorridos: O(n).
 
 ## Evidencias de ejecución
 
@@ -184,16 +200,17 @@ Conclusión: El BST reduce comparaciones respecto a una búsqueda secuencial, es
 
 ---
 
-## Reflexión
+## 🤔 Reflexión
 
 Los árboles binarios de búsqueda permiten insertar, buscar y eliminar en tiempo promedio O(log n) manteniendo los datos ordenados. Son base de estructuras más avanzadas (AVL, Red-Black, B-Trees) usadas en bases de datos, compiladores y motores de búsqueda. En gestión de empleados, al crecer el número de registros, un BST reduce comparaciones frente a una búsqueda lineal, mejorando rendimiento sin requerir estructuras externas.
 
 ---
 
 ## 👥 Autores
-* Erick Mauricio Santiago Díaz (@Erick-MSD)
-* Josué David Murillo Gómez (@Josuemgd15)
-* Santiago Sebastian Rojo Márquez (@Sanlaan)
-* Daniel Isai Sanchez Guadarrama (@DanielIsaiSG)
+
+- Erick Mauricio Santiago Díaz (@Erick-MSD)
+- Josué David Murillo Gómez (@Josuemgd15)
+- Santiago Sebastian Rojo Márquez (@Sanlaan)
+- Daniel Isai Sanchez Guadarrama (@DanielIsaiSG)
 
 <!-- Fin del documento -->
