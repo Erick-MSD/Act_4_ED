@@ -32,20 +32,24 @@ Este proyecto implementa un Árbol Binario de Búsqueda (BST) en Java con operac
 
 ---
 
-## 📂 Estructura del código
-```
+## 📂 Estructura del Proyecto
+
+```bash
 Act_4_ED/
+├── src/
+│   └── act4ed/
+│       ├── tree/
+│       │   ├── Node.java
+│       │   └── BinarySearchTree.java
+│       │
+│       ├── employee/
+│       │   ├── Employee.java
+│       │   └── EmployeeDirectory.java
+│       │
+│       └── Main.java
 │
-├── src/ # Código fuente principal
-│ ├── Nodo.java # Clase que representa un nodo del árbol
-│ ├── ArbolBinario.java # Clase con las operaciones del árbol binario
-│ ├── Main.java # Punto de entrada, pruebas de funcionamiento
-│
-├── docs/ # Documentación y diagramas
-│ └── flujo.png # Diagrama de flujo del programa
-│
-├── README.md # Documentación del proyecto
-└── .gitignore # Archivos y carpetas ignoradas por Git
+├── .gitignore
+└── README.md
 ```
 ---
 
